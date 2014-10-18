@@ -3,6 +3,8 @@ set t_Co=256
 set hidden
 "set mouse=a
 colorscheme distinguished
+set tabstop=4
+set shiftwidth=4
 
 filetype off
 " set the runtime path to include Vundle and initialize
@@ -16,6 +18,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
 call vundle#end()
 
 syntax on
@@ -50,6 +53,8 @@ let g:UltiSnipsJumpBackwardTrigger="<C-K>"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
+"Mixed indent warning off
+let g:airline#extensions#whitespace#enabled = 0
 set laststatus=2
 "set timeoutlen=200
 
@@ -70,3 +75,6 @@ let g:synstastic_enable_signs=1
 "Ctrl+S reach vim
 silent !stty -ixon > /dev/null 2>/dev/null
 nnoremap <C-S> :w<CR>
+"C++11 support
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_opetions = ' -std=c++11 -stdlib=libc++'
