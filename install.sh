@@ -8,5 +8,4 @@ cp .snapshot ~/.snapshot
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 #xdg-open ubuntu_mono_derivative_powerline.ttf
-cp ubuntu_mono_derivative_powerline.ttf ~/.fonts
-fc -cache -v
+cp ubuntu_mono_derivative_powerline.ttf ~/.fonts/ubuntu_mono_derivative_powerline.ttf
