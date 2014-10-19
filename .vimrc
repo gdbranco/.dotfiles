@@ -5,17 +5,19 @@ set hidden
 colorscheme distinguished
 set tabstop=4
 set shiftwidth=4
-
+set timeoutlen=1000
+set ttimeoutlen=0
 filetype off
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'Lokaltog/vim-distinguished'
+Plugin 'Lokaltog/vim-easymotion'
 Plugin 'bling/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'SirVer/ultisnips'
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 'osyo-manga/vim-marching'
+Plugin 'Valloric/YouCompleteMe'
+"Plugin 'osyo-manga/vim-marching'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
@@ -57,7 +59,6 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 "Mixed indent warning off
 let g:airline#extensions#whitespace#enabled = 0
 set laststatus=2
-"set timeoutlen=200
 
 "
 "YCM CFG
