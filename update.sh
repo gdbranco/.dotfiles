@@ -1,4 +1,4 @@
-cp -rf ~/.vim .vim/
+cp -rf ~/.vim .vim
 cp ~/.vimrc .vimrc
 cp ~/.bash_aliases .bash_aliases
 cp ~/.zshrc .zshrc
