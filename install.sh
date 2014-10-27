@@ -6,6 +6,8 @@ for num in "$@"; do
 		cp .vimrc ~/.vimrc
 	elif [ "$num" == "--zsh" or "$num" == "--all" ]; then
 		hash zsh 2>/dev/null || { echo >&2 "I require zsh but it's not installed.  Installing."; sudo apt-get install zsh; }
+		hash curl 2>/dev/null || { echo >&2 "I require curl but it's not installed.  Installing."; sudo apt-get install curl; }
+		curl -L http://install.ohmyz.sh | sh	
 		cp .bashrc ~/.bashrc
 		cp .bash_aliases ~/.bash_aliases
 		cp .zshrc ~/.zshrc
