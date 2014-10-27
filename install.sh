@@ -11,7 +11,7 @@ for num in "$@"; do
 		cp .bashrc ~/.bashrc
 		cp .bash_aliases ~/.bash_aliases
 		cp .zshrc ~/.zshrc
-		cp -rf .oh-my-zsh ~/
+		cp .oh-my-zsh/themes/fino.zsh-theme ~/.oh-my-zsh/themes/fino.zsh-theme
 	elif [ "$num" == "--tmux" or "$num" == "--all" ]; then
 		hash tmux 2>/dev/null || { echo >&2 "I require tmux but it's not installed.  Installing."; sudo apt-get install tmux; }
 		cp .tmux.conf ~/.tmux.conf

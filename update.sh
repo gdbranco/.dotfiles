@@ -6,5 +6,5 @@ cp ~/.zshrc.pre-oh-my-zsh .zshrc.pre-oh-my-zsh
 cp ~/.tmux.conf .tmux.conf
 cp ~/.bashrc .bashrc
 cp ~/.snapshot .snapshot
-cp -rf ~/.oh-my-zsh ./
+cp ~/.oh-my-zsh/themes/fino.zsh-theme ./.oh-my-zsh/themes/fino.zsh-theme
 cp ~/.gdbinit .gdbinit
