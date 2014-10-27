@@ -116,3 +116,5 @@ if [[ ! $TERM =~ screen ]]; then
 	exec tmux -2 new-session -A -s tmux
 fi
 
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/media/branco/UNB_BRANCO/BKP/UNB POO/POO QT'
+let g:netrw_dirhist_2='/media/branco/UNB_BRANCO/BKP/UNB POO/POO QT/POO QT'
+let g:netrw_dirhist_3='/media/branco/UNB_BRANCO/BKP/UNB POO/POO QT/POO QT/Impl'
+let g:netrw_dirhist_4='/media/branco/UNB_BRANCO/BKP/UNB POO/POO QT/POO QT/Impl/Basicos'

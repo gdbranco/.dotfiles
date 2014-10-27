@@ -5,7 +5,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="fino"
+#ZSH_THEME="miloshadzic"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -47,7 +48,9 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git command-not-found spectrum)
 
+alias rvm-prompt=$HOME/.rvm/bin/rvm-prompt
 source $ZSH/oh-my-zsh.sh
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # User configuration
 
@@ -96,10 +99,11 @@ export LESS="--RAW-CONTROL-CHARS"
 #Ctrl Z volta para fg
 fancy-ctrl-z () {
   if [[ $#BUFFER -eq 0 ]]; then
-    bg
-    zle redisplay
+    BUFFER="fg"
+    zle accept-line
   else
     zle push-input
+	zle clear-screen
   fi
 }
 zle -N fancy-ctrl-z
@@ -115,3 +119,5 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 clear
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

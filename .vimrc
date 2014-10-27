@@ -48,7 +48,6 @@ nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <Leader>e :e 
 nnoremap <Leader>q :bp <BAR> bd #<CR>
-inoremap <Leader>n <ESC>
 
 let g:UltiSnipsExpandTrigger="<C-J>"
 let g:UltiSnipsJumpForwardTrigger="<C-J>"
@@ -75,6 +74,7 @@ set completeopt-=preview
 let g:airline#extensions#syntastic#enabled = 1
 let g:syntastic_check_on_open=1
 let g:synstastic_enable_signs=1
+let g:synstastic_python_python_exec = '!/usr/bin/python3.4'
 "Ctrl+S reach vim
 silent !stty -ixon > /dev/null 2>/dev/null
 nnoremap <C-S> :w<CR>
