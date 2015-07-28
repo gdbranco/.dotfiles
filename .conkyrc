@@ -1,0 +1,53 @@
+#background yes
+use_xft yes
+xftfont Trebuchet MS:size=10
+xftalpha 0.8
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_transparent yes
+own_window_type desktop
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_colour white
+double_buffer yes
+draw_shades yes
+draw_outline no
+draw_borders no
+draw_graph_borders no
+#default_color CACACA
+default_color 60646d
+alignment top_right
+#for this part it is good to know your screen size: xdpyinfo | awk '/dimensions/{print $2}'
+maximum_width 400
+minimum_size 200 0
+gap_x 25
+gap_y 0
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale yes
+border_margin 5
+border_width 1
+use_spacer none
+imlib_cache_size 0
+     
+TEXT
+
+${font Trebuchet MS:size=18}${alignr}${color orange}${time %R}${color}${font}
+${alignr}${time %A %B, %G} 
+${color brown}system${color} ${hr 2}
+${color orange}kernel:${color} ${color white}${kernel}${color} 
+${color orange}ram:${color} ${color white}${mem} / ${memmax}${color}
+${color orange}disk:${color} ${color white}${fs_type}: ${fs_used} / ${fs_size}${color}
+
+${color brown}network${color} ${hr 2} ${if_existing /proc/net/route wlan0}
+${color orange}id:${color} ${color white}${wireless_essid wlan0}${color}
+${color orange}signal:${color} ${color white}${wireless_link_qual wlan0}%${color}
+
+${if_running spotify}
+${color brown}spotify${color} ${hr 2}
+${color0}${execpi 2 python $HOME/.conky/spotify-display/spotify_getinfo.py}
+${image $HOME/.conky/spotify-display/latest.jpg -p 0,300 -s 60x60}
+${endif}
+
+
